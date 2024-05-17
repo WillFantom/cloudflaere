@@ -1,0 +1,38 @@
+{
+  "name": "cloudflaere-dev",
+  "image": "ghcr.io/willfantom/devcontainer-go:latest",
+  "workspaceMount": "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.eol": "\n",
+        "files.autoSave": "onFocusChange",
+        "editor.formatOnSave": true,
+        "rewrap.wrappingColumn": 80
+      },
+      "extensions": [
+        "naumovs.color-highlight",
+        "spikespaz.vscode-smoothtype",
+        "alefragnani.Bookmarks",
+        "oderwat.indent-rainbow",
+        "mechatroner.rainbow-csv",
+        "yzhang.markdown-all-in-one",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "gruntfuggly.todo-tree",
+        "mohsen1.prettify-json",
+        "stkb.rewrap",
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "ms-azuretools.vscode-docker",
+        "golang.go",
+        "github.copilot",
+        "github.copilot-chat"
+      ]
+    }
+  }
+}

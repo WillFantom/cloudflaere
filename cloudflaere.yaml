@@ -1,0 +1,14 @@
+# cloudflare
+zoneid: XX
+apikey: YY
+email: ZZ
+
+# traefik
+traefikurl: https://traefik.example.com
+
+# dns
+address: "100.100.100.100"
+proxied: true
+
+# util
+interval: 30s
