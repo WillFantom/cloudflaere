@@ -1,6 +1,7 @@
 package rules
 
 import (
+	"crypto/tls"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -43,4 +44,8 @@ func (t *Traefik) GetVersion() (*TraefikVersion, error) {
 		return nil, fmt.Errorf("could not decode version response: %w", err)
 	}
 	return &version, nil
+}
+
+func init() {
+	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 }
