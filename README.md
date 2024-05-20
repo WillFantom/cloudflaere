@@ -49,6 +49,16 @@ tweaks are made to a record that has been made by a cloudlfære instance, these
 will also be kept. However, tweaks made to a managed record will be removed if
 the record is removed (as a result of a træfik router being removed).
 
+### Træfik
+
+For this, the API must be enabled and insecure access allowed (if running both
+træfik and cloudflære locally together).
+
+```yaml
+ - "--api=true"
+ - "--api.insecure=true"
+```
+
 ### App
 
 The following must be provided (flags, env, or config file):
