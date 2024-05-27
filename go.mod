@@ -3,7 +3,7 @@ module github.com/willfantom/cloudflaere
 go 1.22.3
 
 require (
-	github.com/cloudflare/cloudflare-go v0.95.0
+	github.com/cloudflare/cloudflare-go v0.96.0
 	github.com/sirupsen/logrus v1.9.3
 )
 
@@ -14,7 +14,6 @@ require (
 	github.com/gravitational/trace v1.4.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
-	github.com/jonboulle/clockwork v0.4.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
@@ -33,12 +32,10 @@ require (
 	github.com/traefik/paerser v0.2.0 // indirect
 	github.com/vulcand/predicate v1.2.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	golang.org/x/crypto v0.23.0 // indirect
 	golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842 // indirect
 	golang.org/x/mod v0.17.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
 	golang.org/x/sys v0.20.0 // indirect
-	golang.org/x/term v0.20.0 // indirect
 	golang.org/x/tools v0.21.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
