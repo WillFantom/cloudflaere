@@ -103,7 +103,7 @@ var (
 					if _, ok := domainZones[cfZones[rootDomain]]; !ok {
 						domainZones[cfZones[rootDomain]] = make([]string, 0)
 					}
-					domainZones[cfZones[rootDomain]] = append(domainZones[rootDomain], domain.String())
+					domainZones[cfZones[rootDomain]] = append(domainZones[cfZones[rootDomain]], domain.String())
 				}
 
 				// CREATE MAGIC COMMENT
