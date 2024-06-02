@@ -1,4 +1,4 @@
-package rules
+package tr
 
 import (
 	"encoding/json"
@@ -7,7 +7,10 @@ import (
 	"net/url"
 
 	muxer "github.com/traefik/traefik/v3/pkg/muxer/http"
+	"golang.org/x/net/publicsuffix"
 )
+
+type Domain string
 
 type TraefikRouter struct {
 	Name    string `json:"service"`
@@ -15,7 +18,7 @@ type TraefikRouter struct {
 	Status  string `json:"status"`
 }
 
-func (t *Traefik) GetDomains() ([]string, error) {
+func (t *Traefik) GetDomains() ([]Domain, error) {
 	apiPath, err := url.JoinPath(t.URL, "/api/http/routers")
 	if err != nil {
 		return nil, fmt.Errorf("could not join url path for the http routers endpoint: %w", err)
@@ -32,13 +35,23 @@ func (t *Traefik) GetDomains() ([]string, error) {
 	if err := json.NewDecoder(resp.Body).Decode(&routers); err != nil {
 		return nil, fmt.Errorf("could not decode routers response: %w", err)
 	}
-	domains := make([]string, 0)
+	domains := make([]Domain, 0)
 	for _, router := range routers {
 		ds, err := muxer.ParseDomains(router.RuleStr)
 		if err != nil {
 			return nil, fmt.Errorf("could not parse domains from rule: %w", err)
 		}
-		domains = append(domains, ds...)
+		for _, d := range ds {
+			domains = append(domains, Domain(d))
+		}
 	}
 	return domains, nil
+}
+
+func (d Domain) String() string {
+	return string(d)
+}
+
+func (d Domain) Root() (string, error) {
+	return publicsuffix.EffectiveTLDPlusOne(d.String())
 }

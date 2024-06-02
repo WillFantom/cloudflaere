@@ -1,4 +1,4 @@
-package rules
+package tr
 
 import (
 	"crypto/tls"

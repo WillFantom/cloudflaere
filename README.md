@@ -17,27 +17,26 @@ Simply run the following compose:
 name: cloudflaere
 
 services:
-  container_name: cloudflære
+  container_name: cloudflaere
   image: ghcr.io/willfantom/cloudflaere:latest
   restart: unless-stopped
   hostname: ${HOSTNAME}
   networks:
     - traefik-network
   environment:
-    - ZONEID=${CF_ZONE_ID}
-    - APIKEY=${CF_API_KEY}
-    - EMAIL=${CF_EMAIL}
-    - TRAEFIKURL=http://traefik:8080
-    - ADDRESS=III.JJJ.KKK.LLL
-    - PROXIED=true
-    - INTERVAL=30s
+    - CLOUDFLARE_ZONE=
+    - CLOUDFLARE_DNS=
+    - TRAEFIKURL=
+    - DDNS_IPV4=
+    - DDNS_IPV6=
 
 networks:
   traefik-network:
     external: true
 ```
 
-Alongside there must be a `.env` file adding the given vars.
+> Env vars should be populated as described [here](#cloudflære-1). Config file
+> or commands are also available.
 
 ## Configuration
 
@@ -59,18 +58,29 @@ træfik and cloudflære locally together).
  - "--api.insecure=true"
 ```
 
-### App
+### Cloudflære
 
-The following must be provided (flags, env, or config file):
- - `ZONEID`: the ID for the cloudflare zone to be managed.
- - `APIKEY`: your global cloudflare API key -- assuming your account has
-   permissions for the given zone.
- - `EMAIL`: the email address for the associated cloudfare account.
- - `TRAEFIKURL`: the full URL to the traefik instance to be monitored
- - `ADDRESS`: the IPv4 or IPv6 address to be provided as the content to any
-   managed records.
- - `PROXIED`: use (if `true`) cloudflare proxy on any created records by default.
- - `INTERVAL`: frequency to poll the træfik API for new/removed http routers.
+|      Key       |                                                                   Description                                                                   |  Default   |
+| :------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: | :--------: |
+|   `verbose`    |                                                       **(bool)** Output debug level logs                                                        |  `false`   |
+|   `interval`   |                         **(dur)** Time between each interval, checking both cloudflare dns records and treafik domains                          |    `1m`    |
+|   `instance`   | The name used in the magic comment. Should be different for each instance of cloudflaere being run where they the same access to a set of zones | *hostname* |
+| **cloudflare** |                                                                                                                                                 |            |
+|     `zone`     |                                                A cloudflare API key with `zone:read` permissions                                                |            |
+|     `dns`      |                                                A cloudflare API key with `dns:edit` permissions                                                 |            |
+|   `proxied`    |                        **(bool)** When createing new records, cloudflaere will set the proxied flag to match this option                        |  `false`   |
+|  **traefik**   |                                                                                                                                                 |            |
+|     `url`      |                                The full URL of the target traefik instance (including scheme such as `https://`)                                |            |
+|    **ddns**    |                                                                                                                                                 |            |
+|     `ipv4`     |                                 **(bool)** Manage `A` records and associate them with the IPv4 address reported                                 |  `false`   |
+|     `ipv6`     |                               **(bool)** Manage `AAAA` records and associate them with the IPv6 address reported                                |  `false`   |
+
+See the example config file [here](./cloudflaere.yaml).
+
+### Env config
+
+These values can be configured by env vars. To do so, use `_` to express
+nesting. For example `cloudflare.zone` would be `CLOUDFLARE_ZONE`
 
 ## Manual Control
 
@@ -87,22 +97,3 @@ multiple instances to run in parallel on different machines.
    systems, this will cause problems! Since this tool dismisses all Path rule
    information, and a domain can only really be pointing to 1 address at a
    time...
-
-## How it works
-
-The following loop runs at the configured interval (default: `30s`):
-
- - Gets the list of http routers from træfik
-   - In turn, gets the set of rules associated with the routers
-   - Removes paths from the rules and dismisses duplicates
-   - Dismisses any rules where the root domain is not in the given cloudflare zone
- - Get the list of DNS records in the given cloudflare zone
- - For each router rule:
-   - (branch 1) If the record already exists:
-     - Check if it has the magic comment, if not ignore/continue (warn)
-     - If so, check if the record content is correct, if so ignore/continue (debug)
-     - Otherwise, update the record with the expected content (info)
-   - (branch 2) If the rule does not exist
-     - Create the record (info)
- - For each record that has magic comment:
-   - If no router rule matches record name, delete the record (info)

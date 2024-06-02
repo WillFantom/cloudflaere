@@ -1,14 +1,15 @@
-# cloudflare
-zoneid: XX
-apikey: YY
-email: ZZ
-
-# traefik
-traefikurl: https://traefik.example.com
-
-# dns
-address: "100.100.100.100"
-proxied: true
-
-# util
+verbose: true
 interval: 30s
+instance: probablybesttousethehostname
+
+cloudflare:
+  zone: XX
+  dns: YY
+  proxied: false
+
+traefik:
+  url: https://tr.example.com
+
+ddns:
+  ipv4: false
+  ipv6: true
