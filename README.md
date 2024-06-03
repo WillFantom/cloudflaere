@@ -26,7 +26,7 @@ services:
   environment:
     - CLOUDFLARE_ZONE=
     - CLOUDFLARE_DNS=
-    - TRAEFIKURL=
+    - TRAEFIK_URL=
     - DDNS_IPV4=
     - DDNS_IPV6=
 
