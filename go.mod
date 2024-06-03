@@ -47,7 +47,7 @@ require (
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.6 // indirect
 	github.com/spf13/cobra v1.8.0
-	github.com/spf13/viper v1.18.2
+	github.com/spf13/viper v1.19.0
 	github.com/traefik/traefik/v3 v3.0.1
 	golang.org/x/net v0.25.0
 	golang.org/x/text v0.15.0 // indirect
