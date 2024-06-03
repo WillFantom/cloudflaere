@@ -4,11 +4,15 @@
 > all that portable to other ways of addressing this issue.
 
 A service that manages DNS records with Cloudflare based on current HTTP routers
-found on a given Træfik instance.
+found on a given Træfik instance. Enables a "JBOS" (Just a bunch of servers) style multi-server setup.
 
 For example, if new routers are added to the Træfik instance with the domains
 `alice.example.com` and `bob.example.com`, new A or AAAA records will be created
 pointing the subdomains to configured IP.
+
+![cloudflaere arch](./.github/readme/cloudflaere.png)
+
+> ⚠️ Diagram is "logical" and doesn't actually represent a real request...
 
 ## Usage
 
