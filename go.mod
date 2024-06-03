@@ -3,7 +3,7 @@ module github.com/willfantom/cloudflaere
 go 1.22.3
 
 require (
-	github.com/cloudflare/cloudflare-go v0.95.0
+	github.com/cloudflare/cloudflare-go v0.96.0
 	github.com/sirupsen/logrus v1.9.3
 )
 
