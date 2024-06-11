@@ -48,7 +48,7 @@ require (
 	github.com/hashicorp/go-retryablehttp v0.7.6 // indirect
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.19.0
-	github.com/traefik/traefik/v3 v3.0.1
+	github.com/traefik/traefik/v3 v3.0.2
 	golang.org/x/net v0.26.0
 	golang.org/x/text v0.16.0 // indirect
 	golang.org/x/time v0.5.0 // indirect
