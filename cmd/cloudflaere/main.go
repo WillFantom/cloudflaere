@@ -159,7 +159,7 @@ var (
 							recs := c.FilterRecords(records, cf.RecordFilterNameIn(domain), cf.RecordFilterTypeIn(recordType))
 							if len(recs) == 0 {
 								// Record not exist -> create
-								if r, err := c.AddRecord(zoneID, recordType, domain, address.StringExpanded(), magicComment, viper.GetBool("proxied")); err != nil {
+								if r, err := c.AddRecord(zoneID, recordType, domain, address.StringExpanded(), magicComment, viper.GetBool("cloudflare.proxied")); err != nil {
 									logrus.WithError(err).WithField("domain", domain).Errorln("could not add record")
 								} else {
 									logrus.WithField("record", r).WithField("domain", domain).Debugln("record created")
@@ -239,7 +239,7 @@ func init() {
 
 	// cloudflare
 	rootCmd.PersistentFlags().Bool("cf-proxied", false, "set new records to be proxied by cloudflare")
-	viper.BindPFlag("cloudflare.proxied", rootCmd.PersistentFlags().Lookup("proxied"))
+	viper.BindPFlag("cloudflare.proxied", rootCmd.PersistentFlags().Lookup("cf-proxied"))
 	rootCmd.PersistentFlags().String("cf-zone", "", "cloudflare zone read api key")
 	viper.BindPFlag("cloudflare.zone", rootCmd.PersistentFlags().Lookup("cf-zone"))
 	rootCmd.PersistentFlags().String("cf-dns", "", "cloudflare dns edit api key")
