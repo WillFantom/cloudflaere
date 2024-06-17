@@ -3,7 +3,7 @@ module github.com/willfantom/cloudflaere
 go 1.22.3
 
 require (
-	github.com/cloudflare/cloudflare-go v0.96.0
+	github.com/cloudflare/cloudflare-go v0.97.0
 	github.com/sirupsen/logrus v1.9.3
 )
 
@@ -42,10 +42,10 @@ require (
 )
 
 require (
-	github.com/goccy/go-json v0.10.2 // indirect
+	github.com/goccy/go-json v0.10.3 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
-	github.com/hashicorp/go-retryablehttp v0.7.6 // indirect
+	github.com/hashicorp/go-retryablehttp v0.7.7 // indirect
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.19.0
 	github.com/traefik/traefik/v3 v3.0.2
