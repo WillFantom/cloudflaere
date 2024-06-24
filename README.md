@@ -1,5 +1,10 @@
 # **`cloudflære`**
 
+![report card](https://goreportcard.com/badge/github.com/willfantom/cloudflaere)
+![GitHub Actions Workflow
+Status](https://img.shields.io/github/actions/workflow/status/willfantom/cloudflaere/docker.yaml)
+![GitHub Tag](https://img.shields.io/github/v/tag/willfantom/cloudflaere?sort=semver&label=version)
+
 > ⚠️ This has been made with a personal use-case in mind... It probably isn't
 > all that portable to other ways of addressing this issue.
 
