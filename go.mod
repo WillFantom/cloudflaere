@@ -1,7 +1,8 @@
 module github.com/willfantom/cloudflaere
 
-go 1.22.3
-toolchain go1.22.5
+go 1.22.4
+
+toolchain go1.23.0
 
 require (
 	github.com/cloudflare/cloudflare-go v0.102.0
