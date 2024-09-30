@@ -1,8 +1,10 @@
 module github.com/willfantom/cloudflaere
 
 go 1.22.4
+toolchain go1.23.1
+
 require (
-	github.com/cloudflare/cloudflare-go v0.104.0
+	github.com/cloudflare/cloudflare-go v0.106.0
 	github.com/sirupsen/logrus v1.9.3
 )
 
