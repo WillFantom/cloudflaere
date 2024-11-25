@@ -48,7 +48,7 @@ require (
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.19.0
-	github.com/traefik/traefik/v3 v3.2.0
+	github.com/traefik/traefik/v3 v3.2.1
 	golang.org/x/net v0.31.0
 	golang.org/x/text v0.20.0 // indirect
 	golang.org/x/time v0.7.0 // indirect
