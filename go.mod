@@ -49,7 +49,7 @@ require (
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.19.0
 	github.com/traefik/traefik/v3 v3.2.2
-	golang.org/x/net v0.32.0
+	golang.org/x/net v0.33.0
 	golang.org/x/text v0.21.0 // indirect
 	golang.org/x/time v0.8.0 // indirect
 )
