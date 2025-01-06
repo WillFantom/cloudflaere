@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.23.1
 
 require (
-	github.com/cloudflare/cloudflare-go v0.112.0
+	github.com/cloudflare/cloudflare-go v0.113.0
 	github.com/sirupsen/logrus v1.9.3
 )
 
