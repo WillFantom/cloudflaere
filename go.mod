@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.23.1
 
 require (
-	github.com/cloudflare/cloudflare-go v0.113.0
+	github.com/cloudflare/cloudflare-go v0.114.0
 	github.com/sirupsen/logrus v1.9.3
 )
 
@@ -76,5 +76,5 @@ require (
 	github.com/traefik/traefik/v3 v3.3.2
 	golang.org/x/net v0.34.0
 	golang.org/x/text v0.21.0 // indirect
-	golang.org/x/time v0.8.0 // indirect
+	golang.org/x/time v0.9.0 // indirect
 )
