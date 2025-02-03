@@ -947,8 +947,8 @@ github.com/subosito/gotenv v1.6.0 h1:9NlTDc1FTs4qu0DDq7AEtTPNw6SVm7uBMsUCUjABIf8
 github.com/subosito/gotenv v1.6.0/go.mod h1:Dk4QP5c2W3ibzajGcXpNraDfq2IrhjMIvMSWPKKo0FU=
 github.com/traefik/paerser v0.2.1 h1:LFgeak1NmjEHF53c9ENdXdL1UMkF/lD5t+7Evsz4hH4=
 github.com/traefik/paerser v0.2.1/go.mod h1:7BBDd4FANoVgaTZG+yh26jI6CA2nds7D/4VTEdIsh24=
-github.com/traefik/traefik/v3 v3.3.2 h1:xJ/EEIZ7wzGLHItZXH5GodB8Cg+/Iqttzs1r+2AFoSg=
-github.com/traefik/traefik/v3 v3.3.2/go.mod h1:3ls9bNiJkBTReV+Ais3qmR3sjQNEKbosK86rg//yNAQ=
+github.com/traefik/traefik/v3 v3.3.3 h1:Yfxwl+LIG9Dotgyy1uxKcA7ZhaDbnHj8iZpAuDXe1Qg=
+github.com/traefik/traefik/v3 v3.3.3/go.mod h1:3ls9bNiJkBTReV+Ais3qmR3sjQNEKbosK86rg//yNAQ=
 github.com/unrolled/render v1.0.2 h1:dGS3EmChQP3yOi1YeFNO/Dx+MbWZhdvhQJTXochM5bs=
 github.com/unrolled/render v1.0.2/go.mod h1:gN9T0NhL4Bfbwu8ann7Ry/TGHYfosul+J0obPf6NBdM=
 github.com/vulcand/predicate v1.2.0 h1:uFsW1gcnnR7R+QTID+FVcs0sSYlIGntoGOTb3rQJt50=
