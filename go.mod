@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.23.1
 
 require (
-	github.com/cloudflare/cloudflare-go v0.114.0
+	github.com/cloudflare/cloudflare-go v0.115.0
 	github.com/sirupsen/logrus v1.9.3
 )
 
@@ -69,7 +69,7 @@ require (
 )
 
 require (
-	github.com/goccy/go-json v0.10.4 // indirect
+	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.19.0
