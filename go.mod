@@ -38,7 +38,7 @@ require (
 	github.com/spf13/cast v1.7.0 // indirect
 	github.com/spf13/pflag v1.0.6 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
-	github.com/traefik/paerser v0.2.1 // indirect
+	github.com/traefik/paerser v0.2.2 // indirect
 	github.com/unrolled/render v1.0.2 // indirect
 	github.com/vulcand/predicate v1.2.0 // indirect
 	go.opentelemetry.io/otel v1.32.0 // indirect
@@ -73,7 +73,7 @@ require (
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.19.0
-	github.com/traefik/traefik/v3 v3.3.3
+	github.com/traefik/traefik/v3 v3.3.4
 	golang.org/x/net v0.35.0
 	golang.org/x/text v0.22.0 // indirect
 	golang.org/x/time v0.9.0 // indirect
