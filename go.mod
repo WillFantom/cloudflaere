@@ -2,7 +2,7 @@ module github.com/willfantom/cloudflaere
 
 go 1.23.0
 
-toolchain go1.23.1
+toolchain go1.24.1
 
 require (
 	github.com/cloudflare/cloudflare-go v0.115.0
@@ -67,7 +67,7 @@ require (
 	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/spf13/cobra v1.9.1
-	github.com/spf13/viper v1.20.0
+	github.com/spf13/viper v1.20.1
 	github.com/traefik/traefik/v3 v3.3.4
 	golang.org/x/net v0.37.0
 	golang.org/x/text v0.23.0 // indirect
