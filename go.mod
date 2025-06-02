@@ -69,7 +69,7 @@ require (
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
-	github.com/traefik/traefik/v3 v3.4.0
+	github.com/traefik/traefik/v3 v3.4.1
 	golang.org/x/net v0.40.0
 	golang.org/x/text v0.25.0 // indirect
 	golang.org/x/time v0.11.0 // indirect
