@@ -33,7 +33,7 @@ require (
 	github.com/sourcegraph/conc v0.3.0 // indirect
 	github.com/spf13/afero v1.12.0 // indirect
 	github.com/spf13/cast v1.7.1 // indirect
-	github.com/spf13/pflag v1.0.6 // indirect
+	github.com/spf13/pflag v1.0.9 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
 	github.com/traefik/paerser v0.2.2 // indirect
 	github.com/unrolled/render v1.0.2 // indirect
@@ -67,7 +67,7 @@ require (
 require (
 	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
-	github.com/spf13/cobra v1.9.1
+	github.com/spf13/cobra v1.10.1
 	github.com/spf13/viper v1.20.1
 	github.com/traefik/traefik/v3 v3.4.3
 	golang.org/x/net v0.42.0
